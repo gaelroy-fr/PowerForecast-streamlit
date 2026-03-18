@@ -13,7 +13,7 @@ st.set_page_config(
 
 with st.form(key='params_for_api'):
     date_to_predict_price = st.date_input('date a laquelle vous souhaitez prédire un prix', value=datetime.datetime(2024,3,20))
-    lenght_of_prediction = st.number_input('nbre de jours pour lequelles vous voulez des prévisions horaires (0>nbre j > 2)', value=1)
+    lenght_of_prediction = st.number_input('nbre de jours pour lequelles vous voulez des prévisions horaires (0>nbre j > 2)', value=2)
 
     st.form_submit_button('Make prediction')
 
