@@ -19,6 +19,7 @@ with st.form(key='params_for_api'):
         params = dict(
             date=date_to_predict_price,
             days=lenght_of_prediction)
+        
 
         url = 'https://power-forecast-344702926535.europe-west1.run.app/predict/combined'
         response = requests.get(url, params=params)
