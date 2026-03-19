@@ -83,7 +83,7 @@ with col_chart:
         )
 
         fig.update_layout(
-            title='Prédictions de prix vs Prix réel',
+            title='Prix prédits vs Prix réels',
             yaxis_title='Prix (EUR/MWh)',
             height=470,
             legend=dict(
