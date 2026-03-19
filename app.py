@@ -9,6 +9,22 @@ st.set_page_config(
     layout="wide",
 )
 
+# ── Header row: title + logo ──────────────────────────────────
+col_title, col_logo = st.columns([5, 1])
+
+with col_title:
+    st.title("⚡ Power Forecast")
+    st.subheader("Prédiction horaire des prix de l'électricité - Day-Ahead (EUR/MWh)")
+
+with col_logo:
+    st.image("https://www.logotheque-vectorielle.fr/wp-content/uploads/2022/10/logo-vectoriel-le-wagon.jpg", width=850)
+
+st.divider()
+
+# ── Form ──────────────────────────────────────────────────────
+st.markdown("### 📅 Paramètres de prédiction")
+st.caption("Sélectionnez une date de départ et le nombre de jours à prédire.")
+
 
 with st.form(key='params_for_api'):
     date_to_predict_price = st.date_input('date a laquelle vous souhaitez prédire un prix', value=datetime.datetime(2024,3,20))
