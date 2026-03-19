@@ -21,6 +21,7 @@ with col_logo:
 
 st.divider()
 
+
 # ── Main layout: sidebar controls | chart ─────────────────────
 col_controls, col_chart = st.columns([1, 3])
 
@@ -43,6 +44,7 @@ with col_controls:
 with col_chart:
     if submitted:
         params = dict(date=date_to_predict_price, days=lenght_of_prediction)
+
         url = 'https://power-forecast-344702926535.europe-west1.run.app/predict/combined'
 
         with st.spinner("Chargement des prédictions…"):
@@ -54,6 +56,7 @@ with col_chart:
         rnn   = [p['prix_predit_rnn'] for p in pred]
         xgb   = [p['prix_predit_xgb'] for p in pred]
         reel  = [p['prix_reel'] for p in pred]
+
 
         mae_lstm = 12.03
         mae_xgb  = 10.97
@@ -92,6 +95,7 @@ with col_chart:
                 font=dict(size=15),
             )
         )
+
 
         st.plotly_chart(fig, use_container_width=True)
 
