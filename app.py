@@ -51,7 +51,7 @@ with st.form(key='params_for_api'):
 
         fig = go.Figure()
 
-        fig.add_trace(go.Scatter(x=dates, y=reel, mode='lines', name='Prix réel', line=dict(color='green', width=3)))
+        fig.add_trace(go.Scatter(x=dates, y=reel, mode='lines', name='Prix réels', line=dict(color='green', width=3)))
         fig.add_trace(go.Scatter(x=dates, y=rnn, mode='lines', name='LSTM', line=dict(color='blue', width=3, dash='dash')))
         fig.add_trace(go.Scatter(x=dates, y=xgb, mode='lines', name='XGBoost', line=dict(color='orange', width=3, dash='dash')))
 
